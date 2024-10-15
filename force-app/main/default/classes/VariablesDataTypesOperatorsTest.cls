@@ -146,6 +146,7 @@ public class VariablesDataTypesOperatorsTest {
     static void testAverageOfThreeNumbers() {
         Double result = VariablesDataTypesOperators.averageOfThreeNumbers(1, 2, 3);
         Assert.areEqual(2.0, result, 'Incorrect averageOfThreeNumbers result');
+        System.debug('The result is: ' + result);
     }
 
     @IsTest
