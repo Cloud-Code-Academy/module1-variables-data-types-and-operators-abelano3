@@ -129,9 +129,10 @@ public class VariablesDataTypesOperatorsTest {
     static void testIsDateTodayOrFuture() {
         Boolean result = VariablesDataTypesOperators.isDateTodayOrFuture(Date.today().addDays(1));
         Assert.areEqual(true, result, 'Incorrect isDateTodayOrFuture result');
-
+        System.debug('The result is: ' + result);
         result = VariablesDataTypesOperators.isDateTodayOrFuture(Date.today().addDays(-1));
         Assert.areEqual(false, result, 'Incorrect isDateTodayOrFuture result');
+        System.debug('The result is: ' + result);
     }
 
     @IsTest
