@@ -139,6 +139,7 @@ public class VariablesDataTypesOperatorsTest {
     static void testConvertMinutesToMilliseconds() {
         Integer result = VariablesDataTypesOperators.convertMinutesToMilliseconds(1);
         Assert.areEqual(60000, result, 'Incorrect convertMinutesToMilliseconds result');
+        System.debug('The result is: ' + result);
     }
 
     @IsTest
