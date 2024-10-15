@@ -150,7 +150,7 @@ public class VariablesDataTypesOperatorsTest {
     }
 
     @IsTest
-    static void testAdjustOrderOfOperations1() {
+    static void testAdjustOrderOfOperations1() { 
         Assert.areEqual(36, VariablesDataTypesOperators.adjustOrderOfOperations1(5, 7, 3), 'Incorrect result for adjustOrderOfOperations1 with 5, 7, 3 as arguments');
         Assert.areEqual(-8, VariablesDataTypesOperators.adjustOrderOfOperations1(-3, 1, 4), 'Incorrect result for adjustOrderOfOperations1 with -3, 1, 4 as arguments');
         Assert.areEqual(0, VariablesDataTypesOperators.adjustOrderOfOperations1(0, 0, 0), 'Incorrect result for adjustOrderOfOperations1 with 0, 0, 0 as arguments');
