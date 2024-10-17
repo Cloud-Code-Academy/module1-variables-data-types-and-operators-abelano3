@@ -11,79 +11,62 @@ public class VariablesDataTypesOperatorsTest {
     static void testAddition() {
         Integer result = VariablesDataTypesOperators.addition(2, 3);
         Assert.areEqual(5, result, 'Incorrect addition result');
-        System.debug('The result is: ' + result);
         result = VariablesDataTypesOperators.addition(-5, 10);
         Assert.areEqual(5, result, 'Incorrect negative addition result');
-        System.debug('The result is: ' + result);
         result = VariablesDataTypesOperators.addition(0, 7);
         Assert.areEqual(7, result, 'Incorrect addition with 0 result');
-        System.debug('The result is: ' + result);
         result = VariablesDataTypesOperators.addition(1000000, 999999);
         Assert.areEqual(1999999, result, 'Incorrect large number addition result');
-        System.debug('The result is: ' + result);
         result = VariablesDataTypesOperators.addition(null, 5);
         Assert.areEqual(null, result, 'Incorrect null addition result');
-        System.debug('The result is: ' + result);
     }
 
     @IsTest
     static void testSubtraction() {
         Integer result = VariablesDataTypesOperators.subtraction(10, 5);
         Assert.areEqual(5, result, 'Incorrect subtraction result');
-        System.debug('The result is: ' + result);
         result = VariablesDataTypesOperators.subtraction(-5, -10);
         Assert.areEqual(5, result, 'Incorrect negative subtraction result');
-        System.debug('The result is: ' + result);
     }
 
     @IsTest
     static void testMultiplication() {
         Integer result = VariablesDataTypesOperators.multiplication(5, 5);
         Assert.areEqual(25, result, 'Incorrect multiplication result');
-        System.debug('The result is: ' + result);
         result = VariablesDataTypesOperators.multiplication(-5, 5);
         Assert.areEqual(-25, result, 'Incorrect negative multiplication result');
-        System.debug('The result is: ' + result);
     }
 
     @IsTest
     static void testDivision() {
         Decimal result = VariablesDataTypesOperators.division(10, 5);
         Assert.areEqual(2, result, 'Incorrect division result');
-        System.debug('The result is: ' + result);
         result = VariablesDataTypesOperators.division(10, 0);
         Assert.areEqual(0, result, 'Incorrect division by zero result');
-        System.debug('The result is: ' + result);
     }
 
     @IsTest
     static void testIsEven() {
         Boolean result = VariablesDataTypesOperators.isEven(10);
         Assert.areEqual(true, result, 'Incorrect isEven result');
-        System.debug('The result is: ' + result);
         result = VariablesDataTypesOperators.isEven(9);
         Assert.areEqual(false, result, 'Incorrect isEven result');
-        System.debug('The result is: ' + result);
     }
 
     @IsTest
     static void testIsPositive() {
         Boolean result = VariablesDataTypesOperators.isPositive(10);
         Assert.areEqual(true, result, 'Incorrect isPositive result');
-        System.debug('The result is: ' + result);
         result = VariablesDataTypesOperators.isPositive(-10);
         Assert.areEqual(false, result, 'Incorrect isPositive result');
-        System.debug('The result is: ' + result);
     }
 
     @IsTest
     static void testConcatenateStrings() {
         String result = VariablesDataTypesOperators.concatenateStrings('Hello', 'World');
         Assert.areEqual('HelloWorld', result, 'Incorrect concatenateStrings result');
-        System.debug('The result is: ' + result);
         result = VariablesDataTypesOperators.concatenateStrings('Hello', 'Cloud');
         Assert.areEqual('HelloCloud', result, 'Incorrect concatenateStrings result');
-        System.debug('The result is: ' + result);
     }
 
 
@@ -96,7 +79,6 @@ public class VariablesDataTypesOperatorsTest {
 			result,
 			'Incorrect createSentence result for noun "cat" and verb "jumping"'
 		);
-        System.debug('The result is: ' + result);
 		// Test with noun 'bird' and verb 'flying'
 		result = VariablesDataTypesOperators.createSentence('bird', 'flying', '.');
 		Assert.areEqual(
@@ -104,7 +86,6 @@ public class VariablesDataTypesOperatorsTest {
 			result,
 			'Incorrect createSentence result for noun "bird" and verb "flying"'
 		);
-        System.debug('The result is: ' + result);
 		// Additional test case with different noun and verb
 		result = VariablesDataTypesOperators.createSentence('dog', 'running', '?');
 		Assert.areEqual(
@@ -112,41 +93,34 @@ public class VariablesDataTypesOperatorsTest {
 			result,
 			'Incorrect createSentence result for noun "dog" and verb "running"'
 		);
-        System.debug('The result is: ' + result);
 	}
 
     @IsTest
     static void testIsDateInPast() {
         Boolean result = VariablesDataTypesOperators.isDateInPast(Date.today().addDays(-1));
         Assert.areEqual(true, result, 'Incorrect isDateInPast result');
-        System.debug('The result is: ' + result);
         result = VariablesDataTypesOperators.isDateInPast(Date.today().addDays(1));
         Assert.areEqual(false, result, 'Incorrect isDateInPast result');
-        System.debug('The result is: ' + result);
     }
 
     @IsTest
     static void testIsDateTodayOrFuture() {
         Boolean result = VariablesDataTypesOperators.isDateTodayOrFuture(Date.today().addDays(1));
         Assert.areEqual(true, result, 'Incorrect isDateTodayOrFuture result');
-        System.debug('The result is: ' + result);
         result = VariablesDataTypesOperators.isDateTodayOrFuture(Date.today().addDays(-1));
         Assert.areEqual(false, result, 'Incorrect isDateTodayOrFuture result');
-        System.debug('The result is: ' + result);
     }
 
     @IsTest
     static void testConvertMinutesToMilliseconds() {
         Integer result = VariablesDataTypesOperators.convertMinutesToMilliseconds(1);
         Assert.areEqual(60000, result, 'Incorrect convertMinutesToMilliseconds result');
-        System.debug('The result is: ' + result);
     }
 
     @IsTest
     static void testAverageOfThreeNumbers() {
         Double result = VariablesDataTypesOperators.averageOfThreeNumbers(1, 2, 3);
         Assert.areEqual(2.0, result, 'Incorrect averageOfThreeNumbers result');
-        System.debug('The result is: ' + result);
     }
 
     @IsTest
