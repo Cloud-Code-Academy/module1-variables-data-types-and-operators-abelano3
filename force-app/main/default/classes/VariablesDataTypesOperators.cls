@@ -18,124 +18,163 @@
  * If statements are not specifically covered in the lesson this module, but review module 2 flow control section for an overview if needed.
  * Resources: https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/langCon_apex_if_else.htm 
  * 
- * @author Your Name
+  * @author Anthony Belano
  */
 
 public with sharing class VariablesDataTypesOperators {
     /**
-     * Question 1
-     * Performs addition of two numbers.
-     * If either of the numbers is null, return null.
-     * Example: addition(1, 2) should return 3
-     * @param a The first number.
-     * @param b The second number.
-     * @return The sum of the two numbers, or null if either number is null.
-     */
-    public static Integer addition(Integer a, Integer b) {  
-        return null; // Replace null with the variable you used to store the result
-    }
-
+      * Question 1
+      * Performs addition of two numbers.
+      * If either of the numbers is null, return null.
+      * Example: addition(1, 2) should return 3
+      * @param a The first number.
+      * @param b The second number.
+      * @return The sum of the two numbers, or null if either number is null.
+      */
+     public static Integer addition(Integer a, Integer b) {  
+         If (a == null || b == null) {
+             return null;
+         }
+         else {
+             Integer result = a + b;
+             return result;
+         }
+     // Replace null with the variable you used to store the result
+     }
+ 
+     /**
+      * Question 2
+      * Performs subtraction of two numbers.
+      * Example: subtraction(1, 2) should return -1
+      * @param a The first number.
+      * @param b The second number.
+      * @return The difference between the two numbers.
+      */
+     public static Integer subtraction(Integer a, Integer b) {
+         Integer result = a - b;
+         return result; // Replace null with the variable you used to store the result
+     }
+ 
+     /**
+      * Question 3
+      * Performs multiplication of two numbers.
+      * Example: multiplication(2, 3) should return 6
+      * @param a The first number.
+      * @param b The second number.
+      * @return The product of the two numbers.
+      */
+     public static Integer multiplication(Integer a, Integer b) {
+         Integer result = a * b;
+         return result; // Replace null with the variable you used to store the result
+     }
+ 
     /**
-     * Question 2
-     * Performs subtraction of two numbers.
-     * Example: subtraction(1, 2) should return -1
-     * @param a The first number.
-     * @param b The second number.
-     * @return The difference between the two numbers.
-     */
-    public static Integer subtraction(Integer a, Integer b) {
-        return null; // Replace null with the variable you used to store the result
-    }
-
-    /**
-     * Question 3
-     * Performs multiplication of two numbers.
-     * Example: multiplication(2, 3) should return 6
-     * @param a The first number.
-     * @param b The second number.
-     * @return The product of the two numbers.
-     */
-    public static Integer multiplication(Integer a, Integer b) {
-        return null; // Replace null with the variable you used to store the result
-    }
-
-    /**
-     * Question 4
-     * Performs division of two numbers.
-     * If the denominator is zero, return 0 to avoid division by zero error.
-     * Example: division(6, 3) should return 2
-     * @param a The numerator.
-     * @param b The denominator.
-     * @return The quotient of the division, or 0 if the denominator is zero.
-     */
-    public static Decimal division(Integer a, Integer b) {
-        return null; // Replace null with the variable you used to store the result
-    }
-
-    /**
-     * Question 5
-     * Checks if a number is even.
-     * Example: isEven(2) should return true
-     * This concept is not specifically covered in the content this week, but you can use the Math class and the modulus function to understand if the number is even or odd.
-     * The modulus function returns the remainder of a division operation, think about how you can use this to determine if a number is even or odd. 
-     * Resources: https://developer.salesforce.com/docs/atlas.en-us.apexref.meta/apexref/apex_methods_system_math.htm#apex_System_Math_mod
-     * @param num The number to check.
-     * @return True if the number is even, False otherwise.
-     */
-    public static Boolean isEven(Integer num) {
-        return null; // Replace null with the variable you used to store the result
-    }
-
-    /**
-     * Question 6
-     * Checks if a number is positive.
-     * Example: isPositive(2) should return true
-     * @param num The number to check.
-     * @return true if the number is positive, false otherwise.
-     */
-    public static Boolean isPositive(Integer num) {
-        return null; // Replace null with the variable you used to store the result
-    }
-
-    /**
-     * Question 7
-     * Concatenates two strings.
-     * Example: concatenateStrings('Hello', 'World') should return 'HelloWorld'
-     * @param str1 The first string.
-     * @param str2 The second string.
-     * @return The concatenated string.
-     */
-    public static String concatenateStrings(String str1, String str2) {
-        return null; // Replace null with the variable you used to store the result
-    }
-
-	/**
-     * Question 8
-	 * Constructs a sentence by concatenating a given noun, verb, and ending punctuation.
-	 * The sentence is structured to begin with 'The', followed by the noun, then 'is', the verb, and finally the ending punctuation.
-	 * Example: createSentence('cat', 'jumping', '!') should return 'The cat is jumping!'
-	 * Example: createSentence('bird', 'flying', '.') should return 'The bird is flying.'
-	 * @param noun The noun or subject of the sentence.
-	 * @param verb The verb or action of the sentence.
-	 * @param endingPunctuation The punctuation to end the sentence, e.g., '.', '!', '?'
-	 * @return The complete sentence as a single String.
-	 */
-	public static String createSentence(String noun, String verb, String endingPunctuation) {
-		return null; // Replace null with the variable you used to store the result
-	}
-
-    /**
-     * Question 9
-     * Checks if a date is in the past.
-     * Example: isDateInPast(Date.newInstance(2019, 1, 1)) should return true
-     * The concept of getting the current date is not specifically covered in the content this week, but you can use the Date class to get the current date.
-     * Resources: https://developer.salesforce.com/docs/atlas.en-us.apexref.meta/apexref/apex_methods_system_date.htm#apex_System_Date_today
-     * @param dt The date to check.
-     * @return True if the date is in the past, False otherwise.
-     */
-    public static Boolean isDateInPast(Date dt) {
-        return null; // Replace null with the variable you used to store the result
-    }
+      * Question 4
+      * Performs division of two numbers.
+      * If the denominator is zero, return 0 to avoid division by zero error.
+      * Example: division(6, 3) should return 2
+      * @param a The numerator.
+      * @param b The denominator.
+      * @return The quotient of the division, or 0 if the denominator is zero.
+      */
+     public static Decimal division(Integer a, Integer b) {
+         Decimal result;
+         If (b == 0) {
+             result = 0;
+         }
+         else {
+             result = a / b;
+         }
+         return result;// Replace null with the variable you used to store the result
+     }
+ 
+     /**
+      * Question 5
+      * Checks if a number is even.
+      * Example: isEven(2) should return true
+      * This concept is not specifically covered in the content this week, but you can use the Math class and the modulus function to understand if the number is even or odd.
+      * The modulus function returns the remainder of a division operation, think about how you can use this to determine if a number is even or odd. 
+      * Resources: https://developer.salesforce.com/docs/atlas.en-us.apexref.meta/apexref/apex_methods_system_math.htm#apex_System_Math_mod
+      * @param num The number to check.
+      * @return True if the number is even, False otherwise.
+      */
+     public static Boolean isEven(Integer num) {
+         Boolean result;
+         If (Math.mod(num, 2) == 0) {
+             result = true;
+         }
+         else {
+             result = false; 
+         }
+         return result; // Replace null with the variable you used to store the result
+     }
+ 
+     /**
+      * Question 6
+      * Checks if a number is positive.
+      * Example: isPositive(2) should return true
+      * @param num The number to check.
+      * @return true if the number is positive, false otherwise.
+      */
+     public static Boolean isPositive(Integer num) {
+         Boolean result;
+         If (num > 0) {
+             result = true;
+         } else {
+             result = false;
+         }
+         return result; // Replace null with the variable you used to store the result
+     }
+ 
+     /**
+      * Question 7
+      * Concatenates two strings.
+      * Example: concatenateStrings('Hello', 'World') should return 'HelloWorld'
+      * @param str1 The first string.
+      * @param str2 The second string.
+      * @return The concatenated string.
+      */
+     public static String concatenateStrings(String str1, String str2) {
+         String result = str1 + str2;
+         return result; // Replace null with the variable you used to store the result
+     }
+ 
+     /**
+      * Question 8
+      * Constructs a sentence by concatenating a given noun, verb, and ending punctuation.
+      * The sentence is structured to begin with 'The', followed by the noun, then 'is', the verb, and finally the ending punctuation.
+      * Example: createSentence('cat', 'jumping', '!') should return 'The cat is jumping!'
+      * Example: createSentence('bird', 'flying', '.') should return 'The bird is flying.'
+      * @param noun The noun or subject of the sentence.
+      * @param verb The verb or action of the sentence.
+      * @param endingPunctuation The punctuation to end the sentence, e.g., '.', '!', '?'
+      * @return The complete sentence as a single String.
+      */
+     public static String createSentence(String noun, String verb, String endingPunctuation) {
+         String result;
+         result = 'The ' + noun + ' is ' + verb + endingPunctuation;
+         return result; // Replace null with the variable you used to store the result
+     }
+ 
+     /**
+      * Question 9
+      * Checks if a date is in the past.
+      * Example: isDateInPast(Date.newInstance(2019, 1, 1)) should return true
+      * The concept of getting the current date is not specifically covered in the content this week, but you can use the Date class to get the current date.
+      * Resources: https://developer.salesforce.com/docs/atlas.en-us.apexref.meta/apexref/apex_methods_system_date.htm#apex_System_Date_today
+      * @param dt The date to check.
+      * @return True if the date is in the past, False otherwise.
+      */
+     public static Boolean isDateInPast(Date dt) {
+         Boolean result;
+         if (dt < Date.today()) {
+             result = true;
+         }
+         else {
+             result = false;
+         }
+         return result; // Replace null with the variable you used to store the result
+     }
 
     /**
      * Question 10
@@ -147,7 +186,14 @@ public with sharing class VariablesDataTypesOperators {
      * @return True if the date is today or in the future, False otherwise.
      */
     public static Boolean isDateTodayOrFuture(Date dt) {
-        return null; // Replace null with the variable you used to store the result
+        Boolean result;
+        if (dt >= Date.today()) {
+            result = true;
+        }
+        else {
+            result = false;
+        }
+        return result; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -160,9 +206,10 @@ public with sharing class VariablesDataTypesOperators {
      * @return The number of milliseconds equivalent to the given number of minutes.
      */
     public static Integer convertMinutesToMilliseconds(Integer minutes) {
-        Integer MILLISECONDS_PER_MINUTE = null; // Make this value a constant
-        Integer milliseconds;
-        return null; // Replace null with the variable you used to store the result
+        final Integer MILLISECONDS_PER_MINUTE = 60000; // Make this value a constant
+        // Integer milliseconds;
+        Integer result = minutes * MILLISECONDS_PER_MINUTE;
+        return result; // Replace null with the variable you used to store the result
     }    
 
     /**
@@ -176,7 +223,8 @@ public with sharing class VariablesDataTypesOperators {
      * @return The average of the three numbers.
      */
     public static Double averageOfThreeNumbers(Integer a, Integer b, Integer c) {
-        return null; // Replace null with the variable you used to store the result
+        Double result = (a + b + c) / 3;
+        return result; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -191,10 +239,9 @@ public with sharing class VariablesDataTypesOperators {
      */
     public static Integer adjustOrderOfOperations1(Integer a, Integer b, Integer c) {
         // Add parentheses around the addition operation so that it is performed before multiplication
-        Integer result = a + b * c;
-
+        Integer result = (a + b) * c;
         // Return the result
-        return null; // Replace null with the variable you used to store the result
+        return result; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -206,8 +253,8 @@ public with sharing class VariablesDataTypesOperators {
         // Add parentheses in the below expression to change the result.
         // The result of the expression as it is right now is 43. 
         // You should add parentheses so that the result of the expression becomes 8.
-        Integer answer = 48 - 15 + 5 * 2;
-        return null; // Replace null with the variable you used to store the result
+        Integer answer = 48 - (15 + 5) * 2;
+        return answer; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -226,9 +273,8 @@ public with sharing class VariablesDataTypesOperators {
      */
     public static Double complexOrderOfOperations(Integer a, Integer b, Integer c, Integer d, Integer e) {
         // Add parentheses around the multiplication and subtraction operations so that they are performed before division and addition
-        Double result = a * b - c / (Double) d + e;
-
-        return null; // Replace null with the variable you used to store the result
+        Double result = (a * b - c) / (Double) d + e;
+        return result; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -242,8 +288,10 @@ public with sharing class VariablesDataTypesOperators {
         final Double SUBTRACT_FACTOR = 32.0;
         final Double MULTIPLY_FACTOR = 5.0;
         final Double DIVIDE_FACTOR = 9.0;
-    
-        return null; // Replace null with the variable you used to store the result
+        double celcius;
+
+        celcius = (fahrenheit - SUBTRACT_FACTOR) * MULTIPLY_FACTOR / DIVIDE_FACTOR;
+        return celcius; // Replace null with the variable you used to store the result
     }
 
     
@@ -259,11 +307,11 @@ public with sharing class VariablesDataTypesOperators {
      */
     public static Integer performDivisionAndCast(Double a, Double b) {
         // Perform the division and cast (round down) off the result.
-        Double divisionResult = null;
+        Double divisionResult = Math.floor(a / b);
 
         // Write the code for type casting the divisionResult to an Integer
-        Integer roundedResult = null;
-        return null; // Replace null with the variable you used to store the result
+        Integer roundedResult = divisionResult.intValue();
+        return roundedResult; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -277,7 +325,8 @@ public with sharing class VariablesDataTypesOperators {
      */
     public static Decimal calculateWeeklyPaycheck(Decimal hourlyRate, Double numberOfHours) {
         // Calculate the weekly paycheck using the formula: rate multiplied by hours
-        return null; // Replace null with the variable you used to store the result
+        Decimal weeklyPay = hourlyRate * numberOfHours;
+        return weeklyPay; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -291,7 +340,9 @@ public with sharing class VariablesDataTypesOperators {
      * @return A Decimal representing the monthly paycheck.
      */
     public static Decimal calculateMonthlyPaycheck(Decimal hourlyRate, Double numberOfHours) {
-        return null; // Replace null with the variable you used to store the result
+        Decimal weeklyPay = hourlyRate * numberOfHours;
+        Decimal monthlyPay = weeklyPay * 4;
+        return monthlyPay; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -305,6 +356,7 @@ public with sharing class VariablesDataTypesOperators {
      * @return The total cost after applying the sales tax.
      */
     public static Decimal calculateTotalCost(Decimal pricePerUnit, Integer numberOfUnits, Decimal salesTaxRate) {
-        return null; // Replace null with the variable you used to store the result
+        Decimal totCost = pricePerUnit * numberOfUnits * (1 + salesTaxRate);
+        return totCost; // Replace null with the variable you used to store the result
     }
 }

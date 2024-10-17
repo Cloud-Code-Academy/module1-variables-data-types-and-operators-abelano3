@@ -25,7 +25,6 @@ public class VariablesDataTypesOperatorsTest {
     static void testSubtraction() {
         Integer result = VariablesDataTypesOperators.subtraction(10, 5);
         Assert.areEqual(5, result, 'Incorrect subtraction result');
-
         result = VariablesDataTypesOperators.subtraction(-5, -10);
         Assert.areEqual(5, result, 'Incorrect negative subtraction result');
     }
@@ -34,7 +33,6 @@ public class VariablesDataTypesOperatorsTest {
     static void testMultiplication() {
         Integer result = VariablesDataTypesOperators.multiplication(5, 5);
         Assert.areEqual(25, result, 'Incorrect multiplication result');
-
         result = VariablesDataTypesOperators.multiplication(-5, 5);
         Assert.areEqual(-25, result, 'Incorrect negative multiplication result');
     }
@@ -43,7 +41,6 @@ public class VariablesDataTypesOperatorsTest {
     static void testDivision() {
         Decimal result = VariablesDataTypesOperators.division(10, 5);
         Assert.areEqual(2, result, 'Incorrect division result');
-
         result = VariablesDataTypesOperators.division(10, 0);
         Assert.areEqual(0, result, 'Incorrect division by zero result');
     }
@@ -52,7 +49,6 @@ public class VariablesDataTypesOperatorsTest {
     static void testIsEven() {
         Boolean result = VariablesDataTypesOperators.isEven(10);
         Assert.areEqual(true, result, 'Incorrect isEven result');
-
         result = VariablesDataTypesOperators.isEven(9);
         Assert.areEqual(false, result, 'Incorrect isEven result');
     }
@@ -61,7 +57,6 @@ public class VariablesDataTypesOperatorsTest {
     static void testIsPositive() {
         Boolean result = VariablesDataTypesOperators.isPositive(10);
         Assert.areEqual(true, result, 'Incorrect isPositive result');
-
         result = VariablesDataTypesOperators.isPositive(-10);
         Assert.areEqual(false, result, 'Incorrect isPositive result');
     }
@@ -84,7 +79,6 @@ public class VariablesDataTypesOperatorsTest {
 			result,
 			'Incorrect createSentence result for noun "cat" and verb "jumping"'
 		);
-
 		// Test with noun 'bird' and verb 'flying'
 		result = VariablesDataTypesOperators.createSentence('bird', 'flying', '.');
 		Assert.areEqual(
@@ -92,7 +86,6 @@ public class VariablesDataTypesOperatorsTest {
 			result,
 			'Incorrect createSentence result for noun "bird" and verb "flying"'
 		);
-
 		// Additional test case with different noun and verb
 		result = VariablesDataTypesOperators.createSentence('dog', 'running', '?');
 		Assert.areEqual(
@@ -106,7 +99,6 @@ public class VariablesDataTypesOperatorsTest {
     static void testIsDateInPast() {
         Boolean result = VariablesDataTypesOperators.isDateInPast(Date.today().addDays(-1));
         Assert.areEqual(true, result, 'Incorrect isDateInPast result');
-
         result = VariablesDataTypesOperators.isDateInPast(Date.today().addDays(1));
         Assert.areEqual(false, result, 'Incorrect isDateInPast result');
     }
@@ -115,7 +107,6 @@ public class VariablesDataTypesOperatorsTest {
     static void testIsDateTodayOrFuture() {
         Boolean result = VariablesDataTypesOperators.isDateTodayOrFuture(Date.today().addDays(1));
         Assert.areEqual(true, result, 'Incorrect isDateTodayOrFuture result');
-
         result = VariablesDataTypesOperators.isDateTodayOrFuture(Date.today().addDays(-1));
         Assert.areEqual(false, result, 'Incorrect isDateTodayOrFuture result');
     }
@@ -133,7 +124,7 @@ public class VariablesDataTypesOperatorsTest {
     }
 
     @IsTest
-    static void testAdjustOrderOfOperations1() {
+    static void testAdjustOrderOfOperations1() { 
         Assert.areEqual(36, VariablesDataTypesOperators.adjustOrderOfOperations1(5, 7, 3), 'Incorrect result for adjustOrderOfOperations1 with 5, 7, 3 as arguments');
         Assert.areEqual(-8, VariablesDataTypesOperators.adjustOrderOfOperations1(-3, 1, 4), 'Incorrect result for adjustOrderOfOperations1 with -3, 1, 4 as arguments');
         Assert.areEqual(0, VariablesDataTypesOperators.adjustOrderOfOperations1(0, 0, 0), 'Incorrect result for adjustOrderOfOperations1 with 0, 0, 0 as arguments');
